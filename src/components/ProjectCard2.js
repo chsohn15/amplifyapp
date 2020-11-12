@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
-import ReactPlayer from "react-player"
 import HP1 from '../images/HP1.jpeg'
 import HP2 from '../images/HP2.jpeg'
 import HP3 from '../images/HP3.jpeg'
