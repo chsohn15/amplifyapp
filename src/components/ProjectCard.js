@@ -3,11 +3,11 @@ import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
-import BookQuest1 from '../images/BookQuest1.jpeg'
-import BookQuest2 from '../images/BookQuest2.jpeg'
-import BookQuest3 from '../images/BookQuest3.jpeg'
-import BookQuest4 from '../images/BookQuest4.jpeg'
-import BookQuest5 from '../images/BookQuest5.jpeg'
+import BookQuest1 from './images/BookQuest1.jpeg'
+import BookQuest2 from './images/BookQuest2.jpeg'
+import BookQuest3 from './images/BookQuest3.jpeg'
+import BookQuest4 from './images/BookQuest4.jpeg'
+import BookQuest5 from './images/BookQuest5.jpeg'
 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import MobileStepper from '@material-ui/core/MobileStepper';

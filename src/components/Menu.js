@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import CSLogo from '../images/CSLogo4.png'
+import CSLogo from './images/CSLogo4.png'
 import GitHub from '@material-ui/icons/GitHub';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
