@@ -3,13 +3,13 @@ import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
-import AG1 from './images/AG1.jpeg'
-import AG2 from './images/AG2.jpeg'
-import AG3 from './images/AG3.jpeg'
-import AG4 from './images/AG4.jpeg'
-import AG5 from './images/AG5.jpeg'
-import AG6 from './images/AG6.jpeg'
-import AG7 from './images/AG7.jpeg'
+import AG1 from './images/AG1.jpg'
+import AG2 from './images/AG2.jpg'
+import AG3 from './images/AG3.jpg'
+import AG4 from './images/AG4.jpg'
+import AG5 from './images/AG5.jpg'
+import AG6 from './images/AG6.jpg'
+import AG7 from './images/AG7.jpg'
 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import MobileStepper from '@material-ui/core/MobileStepper';
@@ -83,15 +83,7 @@ const ProjectCard3 = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  //Code for popper
-  const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleClick = (event) => {
-    setAnchorEl(anchorEl ? null : event.currentTarget);
-  };
-
-  const open = Boolean(anchorEl);
-  const id = open ? 'simple-popper' : undefined;
 
 
 return (
@@ -130,7 +122,7 @@ return (
           <Card.Title>{'K & C Art Gallery'}
             <ModalVideo channel='youtube' isOpen={isOpen} videoId='Bf8jipkXKlU' onClose={() => openModal(false)} />
             <YouTubeIcon onClick={openModal} style={{cursor: 'pointer', fontSize: '30px', marginLeft: '15px'}}>Youtube</YouTubeIcon>
-            <a href="https://github.com/chsohn15/final_art_gallery" target = "_blank" rel = "noopener noreferrer"><GitHubIcon style={{ marginLeft: '10px', color: 'black'}} aria-describedby={id} type="button" /></a>
+            <a href="https://github.com/chsohn15/final_art_gallery" target = "_blank" rel = "noopener noreferrer"><GitHubIcon style={{ marginLeft: '10px', color: 'black'}} type="button" /></a>
           </Card.Title>
           <Card.Text>
           <em>A virtual art gallery that recreates the aesthetic and sensory experience of being in a museum </em><br/><br/>

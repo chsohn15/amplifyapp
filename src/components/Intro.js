@@ -66,7 +66,7 @@ const Intro = () => {
     margin-right: auto;
     color: purple;
     width: 100px;
-    margin-top: 260px;
+    margin-top: 18%;
     `
 
     return (
