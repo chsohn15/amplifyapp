@@ -52,6 +52,10 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'hidden',
     display: 'block',
     width: '100%',
+    height: '340px',
+    "@media only screen and (max-width: 600px)":{
+      height: '200px',
+    }
   },
   paper: {
     border: '1px solid',
@@ -100,7 +104,7 @@ return (
         className={classes.img}
         src={tutorialSteps[activeStep].imgPath}
         alt={tutorialSteps[activeStep].label}
-        style={{height: '340px'}}
+        id="project-image"
       />
       <MobileStepper
         steps={maxSteps}
