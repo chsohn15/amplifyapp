@@ -9,16 +9,16 @@ const Work = (props) => {
 
   const Header = props.Header
     return (
-      <Container id="work" style={{marginTop: '75px'}}>
+      <Container style={{marginTop: '75px'}}>
       <Row style={{marginLeft: '0px', marginRight: '0px'}}>
         <SectionHeader Header={props.Header} title={"Work Experience"}/>
       </Row>
       <Row style={{marginLeft: '100px', marginTop: '0px', marginRight: '100px'}}>
-        <Col>
-        <Card >
+      <Col>
+        <Card className="work-card">
             <Row >
                 <Card.Body style={{marginLeft: '10px'}}>
-                  <Card.Text>
+                  <Card.Text style={{overflow: 'scroll'}}>
                   <p style={{whiteSpace: 'pre'}}><em>Software Engineering Student</em>, <strong>Flatiron School</strong>, Washington, DC.                                         July 2020 - October 2020</p>
             <ul>
                 <li>Participated in full-time Software Engineering Program</li>
@@ -31,7 +31,7 @@ const Work = (props) => {
             </Row>
           </Card >
 
-          <Card style={{marginTop: '30px'}}>
+          <Card className="work-card" style={{marginTop: '30px'}}>
             <Row >
                 <Card.Body style={{marginLeft: '10px'}}>
                   <Card.Text>
@@ -46,7 +46,7 @@ const Work = (props) => {
                 </Card.Body>
             </Row>
           </Card >
-          <Card style={{marginTop: '30px'}}>
+          <Card className="work-card" style={{marginTop: '30px'}}>
             <Row >
                 <Card.Body style={{marginLeft: '10px'}}>
                   <Card.Text>
@@ -60,7 +60,7 @@ const Work = (props) => {
                 </Card.Body>
             </Row>
           </Card>
-        </Col>
+          </Col>
       </Row>
       </Container>
     )

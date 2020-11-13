@@ -43,6 +43,9 @@ const Intro = () => {
     padding-top: 150px; 
     color: purple; 
     margin-left: 50px;
+    @media (max-width: 600px) {
+        margin-top: 10px;
+      }
     `;
 
     const Title = styled.h1`
@@ -50,6 +53,9 @@ const Intro = () => {
     color: purple; 
     margin-left: 50px;
     font-size: 55px
+    @media (max-width: 600px) {
+        font-size: 10px;
+      }
     `;
 
     const Arrow = styled.i`

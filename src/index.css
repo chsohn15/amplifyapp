@@ -11,6 +11,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body{
+  overflow-x: hidden;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -209,6 +213,17 @@ code {
     display:block;
     margin-right:0;
     font-weight:600
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .App {
+    width: 105%;
+  }
+  .work-card{
+    width: 340px;
+    margin-left: -105px;
+    margin-right: 650px;
   }
 }
 
