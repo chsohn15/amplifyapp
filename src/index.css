@@ -11,6 +11,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -209,6 +210,27 @@ code {
     display:block;
     margin-right:0;
     font-weight:600
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .App {
+    width: 105%;
+  }
+  .work-card{
+    width: 330px;
+    margin-left: -115px;
+    margin-right: 700px;
+  }
+  .work-card-body{
+    width: 300px;
+    white-space: normal;
+  }
+  #profile-image, .blog-card, #contact{
+    width: 95%;
+  }
+  html, body{
+    overflow-x: hidden;
   }
 }
 
