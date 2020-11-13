@@ -8,6 +8,7 @@ import ContactMe from './components/ContactMe.js'
 import Footer from './components/Footer.js'
 import styled from 'styled-components';
 import { useEffect, useState } from 'react'
+import Container from 'react-bootstrap/Container'
 //import { BrowserRouter } from 'react-router-dom'
 
 function App() {

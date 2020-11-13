@@ -42,6 +42,7 @@ const MyStory = (props) => {
               </Col>
               <Col md="4">
                 <Card.Img
+                  id="profile-image"
                   top
                   width="100%"
                   src={ProfilePhoto}

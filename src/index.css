@@ -73,12 +73,12 @@ code {
   }
 }
 
-#sticky-top {
+/* #sticky-top {
   animation-duration: 4s;
   animation-fill-mode: both;
   -webkit-animation-duration: 4s;
   -webkit-animation-fill-mode: both
-}
+} */
 
 /* Footer */
 
