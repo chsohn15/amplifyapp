@@ -225,6 +225,10 @@ code {
     margin-left: -105px;
     margin-right: 650px;
   }
+  .work-card-body{
+    width: 300px;
+    white-space: normal;
+  }
 }
 
 

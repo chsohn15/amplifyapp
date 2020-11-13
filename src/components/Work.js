@@ -18,8 +18,8 @@ const Work = (props) => {
         <Card className="work-card">
             <Row >
                 <Card.Body style={{marginLeft: '10px'}}>
-                  <Card.Text style={{overflow: 'scroll'}}>
-                  <p style={{whiteSpace: 'pre'}}><em>Software Engineering Student</em>, <strong>Flatiron School</strong>, Washington, DC.                                         July 2020 - October 2020</p>
+                  <Card.Text className="work-card-body">
+                  <p className="work-card-body" style={{whiteSpace: 'pre'}}><em className="work-card-body">Software Engineering Student,</em> <strong>Flatiron School</strong>, Washington, DC.                                      <span className="work-card-body">July 2020 - October 2020</span></p>
             <ul>
                 <li>Participated in full-time Software Engineering Program</li>
                 <li>Produced projects with Ruby on Rails, Javascript, React, and Redux</li>
