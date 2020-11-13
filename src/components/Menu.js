@@ -10,7 +10,7 @@ import { faMedium } from '@fortawesome/free-brands-svg-icons'
 
 
 const Menu = () => {
-
+    const [isHide, hide] = useState(false)
     const [stickyTopStatus, changeStatus] = useState("sticky-top")
 
     let prev = 0 
