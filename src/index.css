@@ -237,6 +237,9 @@ code {
   #logo{
     display: none;
   }
+  .menu-icon{
+    display: none;
+  }
 }
 
 
