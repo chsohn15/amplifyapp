@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import styled from 'styled-components';
 import Nav from 'react-bootstrap/Nav'
+import CSLogo from './images/CSLogo4.png'
 
 
 const Intro = () => {

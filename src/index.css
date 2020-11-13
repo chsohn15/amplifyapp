@@ -234,6 +234,9 @@ code {
   html, body{
     overflow-x: hidden;
   }
+  #logo{
+    display: none;
+  }
 }
 
 
