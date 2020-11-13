@@ -213,9 +213,10 @@ code {
   }
 }
 
+
 @media only screen and (max-width: 600px){
   .App {
-    width: 105%;
+    width: 115%;
   }
   .work-card{
     width: 330px;
@@ -228,6 +229,7 @@ code {
   }
   #profile-image, .blog-card, #contact{
     width: 95%;
+    margin-left: 10px;
   }
   html, body{
     overflow-x: hidden;
