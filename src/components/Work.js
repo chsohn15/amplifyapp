@@ -34,8 +34,8 @@ const Work = (props) => {
           <Card className="work-card" style={{marginTop: '30px'}}>
             <Row >
                 <Card.Body style={{marginLeft: '10px'}}>
-                  <Card.Text>
-                  <p style={{whiteSpace: 'pre'}}><em>English Teacher</em>, <strong>South County High School</strong>, Lorton, VA.                                                      August 2016 - June 2020</p>
+                  <Card.Text className="work-card-body">
+                  <p  className="work-card-body"style={{whiteSpace: 'pre'}}><em className="work-card-body">English Teacher,</em> <strong>South County High School</strong>, Lorton, VA.                                                    <span className="work-card-body">August 2016 - June 2020</span></p>
                   <ul>
                     <li>Successfully engaged students in grades 10-12 through varied methods including small group work, effective moderating of class discussion, and authentic assessments</li>
                     <li>Collaborated with grade-level teams to create cohesive literary units centered around engaging topics</li>
@@ -49,8 +49,8 @@ const Work = (props) => {
           <Card className="work-card" style={{marginTop: '30px'}}>
             <Row >
                 <Card.Body style={{marginLeft: '10px'}}>
-                  <Card.Text>
-                  <p style={{whiteSpace: 'pre'}}><em>ESOL Teacher</em>, <strong>South Lakes High School</strong>, Reston, VA.		                                                         August 2015 - June 2016</p>
+                  <Card.Text className="work-card-body">
+                  <p className="work-card-body" style={{whiteSpace: 'pre'}}><em className="work-card-body" >ESOL Teacher,</em> <strong>South Lakes High School</strong>, Reston, VA.		                                                        <span className="work-card-body">August 2015 - June 2016</span></p>
                   <ul>
                     <li>Planned and implemented varied instruction for ESOL Level 1 Content and Literature classes</li>
                     <li>Set measurable and attainable academic goals for students based upon benchmark reading and writing assessments</li>

@@ -42,7 +42,6 @@ function App() {
 
   return (
     <div className="App">
-      <Container fluid>
       <Menu />
       <Intro />
       <div class="main">
@@ -53,7 +52,6 @@ function App() {
         <ContactMe Header={Header}/>
       </div>
       <Footer />
-      </Container>
     </div>
   );
 }
