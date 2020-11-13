@@ -96,6 +96,7 @@ return (
         className={classes.img}
         src={tutorialSteps[activeStep].imgPath}
         alt={tutorialSteps[activeStep].label}
+        style={{height: '330px'}}
       />
       <MobileStepper
         steps={maxSteps}

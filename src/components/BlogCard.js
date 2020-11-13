@@ -21,7 +21,7 @@ else{
 }
 
 return(
-    <Card>
+    <Card className="blog-card">
         <Card.Img variant="top" src={imgSrc}/> 
         <Card.Body>
             <a href={link} style={{display: "table-cell"}} target = "_blank" rel = "noopener noreferrer">

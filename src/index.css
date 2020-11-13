@@ -230,6 +230,9 @@ code {
     width: 300px;
     white-space: normal;
   }
+  #profile-image, .blog-card, #contact{
+    width: 95%;
+  }
 }
 
 

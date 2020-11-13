@@ -44,7 +44,8 @@ const Intro = () => {
     color: purple; 
     margin-left: 50px;
     @media (max-width: 600px) {
-        margin-top: 10px;
+        margin-top: -20px;
+        margin-left: 30px;
       }
     `;
 
@@ -52,10 +53,11 @@ const Intro = () => {
     padding-top: 10px; 
     color: purple; 
     margin-left: 50px;
-    font-size: 55px
+    font-size: 55px;
     @media (max-width: 600px) {
-        font-size: 10px;
-      }
+        font-size: 35px;
+        margin-left: 30px;
+      };
     `;
 
     const Arrow = styled.i`
@@ -65,6 +67,9 @@ const Intro = () => {
     margin-left: auto;
     margin-right: auto;
     margin-top: 3px;
+    @media (max-width: 600px) {
+        display: none;
+      };
     `;
 
     const Text = styled.div`
@@ -73,6 +78,9 @@ const Intro = () => {
     color: purple;
     width: 100px;
     margin-top: 18%;
+    @media (max-width: 600px) {
+        display: none;
+      };
     `
 
     return (
