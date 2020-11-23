@@ -34,7 +34,7 @@ const Menu = () => {
 
     return (
         <Navbar bg="dark" variant="dark" className={stickyTopStatus} id={stickyTopStatus}>
-            <Navbar.Brand id="logo" href="#jumbotron" style={{marginLeft: '30px', marginTop: '-1px'}}>
+            <Navbar.Brand id="logo" href="#home" style={{marginLeft: '30px', marginTop: '-1px'}}>
                 <img
                 alt=""
                 src={CSLogo}
