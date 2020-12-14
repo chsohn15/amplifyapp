@@ -11,7 +11,9 @@ const { title, thumbnail, content, link } = props.blog
 let pTag = content.search('<p>')
 let stringStart = pTag + 3
 
-const preview = content.slice(stringStart, stringStart + 150)
+let preview = content.slice(stringStart, stringStart + 150)
+preview = preview.replace(/<\/?[^>]+(>|$)/g, "")
+
 let imgSrc 
 if (thumbnail){
     imgSrc = thumbnail
