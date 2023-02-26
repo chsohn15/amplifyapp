@@ -44,8 +44,8 @@ const Menu = () => {
             />{' '}</Navbar.Brand>
             <Nav className="mr-auto">
                 <Nav.Link href="#my-story">My Story</Nav.Link>
-                <Nav.Link href="#projects">Projects</Nav.Link>
                 <Nav.Link href="#work">Work</Nav.Link>
+                <Nav.Link href="#projects">Projects</Nav.Link>
                 <Nav.Link href="#blog">Blog</Nav.Link>
                 <Nav.Link href="#contact">Contact Me</Nav.Link>
             </Nav>

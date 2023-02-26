@@ -46,8 +46,8 @@ function App() {
       <Intro />
       <div class="main">
         <MyStory Header={Header}/>
-        <Projects Header={Header}/>
         <Work Header={Header}/>
+        <Projects Header={Header}/>
         <Blogs Header={Header} blogs={blogs}/>
         <ContactMe Header={Header}/>
       </div>
