@@ -48,7 +48,6 @@ const Work = (props) => {
                 </Card.Body>
             </Row>
           </Card >
-
           <Card style={{marginTop: '30px'}}>
             <Row >
                 <Card.Body style={{marginLeft: '10px'}}>
