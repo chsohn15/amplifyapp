@@ -15,7 +15,7 @@ const Work = (props) => {
       </Row>
       <Row style={{marginLeft: '100px', marginTop: '0px', marginRight: '100px'}}>
         <Col>
-        <Card >
+        <Card className='card-work'>
             <Row >
                 <Card.Body style={{marginLeft: '10px'}}>
                   <Card.Text>
