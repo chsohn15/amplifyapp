@@ -13,7 +13,7 @@ const Work = (props) => {
       <Row style={{marginLeft: '0px', marginRight: '0px'}}>
         <SectionHeader Header={props.Header} title={"Work Experience"}/>
       </Row>
-      <Row style={{marginLeft: '100px', marginTop: '0px', marginRight: '100px'}}>
+      <Row className='cards-container'>
         <Col>
         <Card className='card-work'>
             <Row >
