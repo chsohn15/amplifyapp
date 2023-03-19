@@ -17,10 +17,10 @@ const Work = (props) => {
         <Col>
         <Card className='card-work'>
             <Row >
-                <Card.Body style={{marginLeft: '10px'}}>
+                <Card.Body style={{marginLeft: '10px', paddingLeft: '2rem', paddingRight: '2rem'}}>
                   <Card.Text>
-                  <p style={{whiteSpace: 'pre', marginBottom: '0px'}}><em>Web Developer/Engineer</em>, <strong>Facing History &#38; Ourselves</strong>, Brookline, Massachusetts.            June 2022 - Present</p>
-                  <p style={{whiteSpace: 'pre'}}><em>Junior Web Developer</em>                                                                                                                    January 2021 - May 2022</p>
+                    <div style={{marginBottom: '0px'}}><em>Web Developer/Engineer</em>, <strong>Facing History &#38; Ourselves</strong>, Brookline, Massachusetts. <em>June 2022 - Present.</em></div>
+                    <div><em>Junior Web Developer</em>. <em>January 2021 - May 2022.</em></div>
             <ul>
                 <li>Translate designs from Sketch into Storybook with SASS and CSS to create a seamless user experience</li>
                 <li>Develop code in Javascript, SASS, and PHP to form the front-end and back-end of a Drupal website</li>
@@ -35,9 +35,9 @@ const Work = (props) => {
           </Card >
         <Card style={{marginTop: '30px'}}>
             <Row >
-                <Card.Body style={{marginLeft: '10px'}}>
+                <Card.Body style={{marginLeft: '10px', paddingLeft: '2rem', paddingRight: '2rem'}}>
                   <Card.Text>
-                  <p style={{whiteSpace: 'pre'}}><em>Software Engineering Student</em>, <strong>Flatiron School</strong>, Washington, DC.                                         July 2020 - October 2020</p>
+                  <p><em>Software Engineering Student</em>, <strong>Flatiron School</strong>, Washington, DC. <em>July 2020 - October 2020.</em></p>
             <ul>
                 <li>Participated in full-time Software Engineering Program</li>
                 <li>Produced projects with Ruby on Rails, Javascript, React, and Redux</li>
@@ -50,9 +50,9 @@ const Work = (props) => {
           </Card >
           <Card style={{marginTop: '30px'}}>
             <Row >
-                <Card.Body style={{marginLeft: '10px'}}>
+                <Card.Body style={{marginLeft: '10px', paddingLeft: '2rem', paddingRight: '2rem'}}>
                   <Card.Text>
-                  <p style={{whiteSpace: 'pre'}}><em>English Teacher</em>, <strong>South County High School</strong>, Lorton, VA.                                                      August 2016 - June 2020</p>
+                  <p><em>English Teacher</em>, <strong>South County High School</strong>, Lorton, VA. <em>August 2016 - June 2020.</em></p>
                   <ul>
                     <li>Successfully engaged students in grades 10-12 through varied methods including small group work, effective moderating of class discussion, and authentic assessments</li>
                     <li>Collaborated with grade-level teams to create cohesive literary units centered around engaging topics</li>
@@ -65,9 +65,9 @@ const Work = (props) => {
           </Card >
           <Card style={{marginTop: '30px'}}>
             <Row >
-                <Card.Body style={{marginLeft: '10px'}}>
+                <Card.Body style={{marginLeft: '10px', paddingLeft: '2rem', paddingRight: '2rem'}}>
                   <Card.Text>
-                  <p style={{whiteSpace: 'pre'}}><em>ESOL Teacher</em>, <strong>South Lakes High School</strong>, Reston, VA.		                                                         August 2015 - June 2016</p>
+                  <p><em>ESOL Teacher</em>, <strong>South Lakes High School</strong>, Reston, VA. <em>August 2015 - June 2016.</em></p>
                   <ul>
                     <li>Planned and implemented varied instruction for ESOL Level 1 Content and Literature classes</li>
                     <li>Set measurable and attainable academic goals for students based upon benchmark reading and writing assessments</li>
