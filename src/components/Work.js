@@ -20,7 +20,7 @@ const Work = (props) => {
                 <Card.Body style={{marginLeft: '10px', paddingLeft: '2rem', paddingRight: '2rem'}}>
                   <Card.Text>
                     <div style={{marginBottom: '0px'}}><em>Web Developer/Engineer</em>, <strong>Facing History &#38; Ourselves</strong>, Brookline, Massachusetts. <em>June 2022 - Present.</em></div>
-                    <div><em>Junior Web Developer</em>. <em>January 2021 - May 2022.</em></div>
+                    <div><em>Junior Web Developer</em>, <strong>Facing History &#38; Ourselves</strong>, Brookline, Massachusetts.<em> January 2021 - May 2022.</em></div>
             <ul>
                 <li>Translate designs from Sketch into Storybook with SASS and CSS to create a seamless user experience</li>
                 <li>Develop code in Javascript, SASS, and PHP to form the front-end and back-end of a Drupal website</li>
