@@ -19,15 +19,21 @@ const Work = (props) => {
             <Row >
                 <Card.Body style={{marginLeft: '10px', paddingLeft: '2rem', paddingRight: '2rem'}}>
                   <Card.Text>
-                    <div style={{marginBottom: '0px'}}><em>Web Developer/Engineer</em>, <strong>Facing History &#38; Ourselves</strong>, Brookline, Massachusetts. <em>June 2022 - Present.</em></div>
+                    <div style={{marginBottom: '0px'}}><em>Senior Web Developer/Engineer</em>, <strong>Facing History &#38; Ourselves</strong>, Brookline, Massachusetts. <em>September 2024 - Present.</em></div>
+                    <div><em>Web Developer</em>, <strong>Facing History &#38; Ourselves</strong>, Brookline, Massachusetts.<em> June 2022 - August 2024.</em></div>
                     <div><em>Junior Web Developer</em>, <strong>Facing History &#38; Ourselves</strong>, Brookline, Massachusetts.<em> January 2021 - May 2022.</em></div>
             <ul>
-                <li>Translate designs from Sketch into Storybook with SASS and CSS to create a seamless user experience</li>
-                <li>Develop code in Javascript, SASS, and PHP to form the front-end and back-end of a Drupal website</li>
-                <li>Train colleagues in fundraising and marketing platforms such as Hubspot and Jackson River Springboard</li>
-                <li>Design and build landing pages that appeal to donors and educators</li>
-                <li>Provide web development support to colleagues and stakeholders</li>
-                <li>Conduct QA testing and facilitate release deployments</li>
+              <li>Work closely with UX/UI designers to implement pixel-perfect and mobile responsive web pages for a seamless user experience</li>
+              <li>Develop custom Drupal modules and themes, such as building digital hubs for school districts and recurring event series to increase educator engagement</li>
+              <li>Communicate with stakeholders to understand requirements and implement changes to website features and layouts</li>
+              <li>Collaborate in an Agile team environment, participating in sprint planning, code reviews, pair programming, and retrospectives</li>
+              <li>Develop code in Javascript, SASS, Twig, and PHP to form the front-end and back-end of a Drupal 10 website</li>
+              <li>Lead a cross-functional team to update and enhance website documentation</li>
+              <li>Train colleagues in third-party fundraising and marketing platforms such as Hubspot and Jackson River Springboard</li>
+              <li>Provide web development support to colleagues and stakeholders</li>
+              <li>Conduct QA testing and facilitate release deployments</li>
+              <li>Transition Facing History’s website from Drupal 7 to Drupal 10 to create the new Digital Experience Platform</li>
+              <li>Progressed from Junior Web Developer to Senior Web Developer in just three years by consistently demonstrating strong problem-solving skills, leadership abilities, and a commitment to professional growth</li>
             </ul>
                 </Card.Text>
                 </Card.Body>
@@ -63,20 +69,6 @@ const Work = (props) => {
                 </Card.Body>
             </Row>
           </Card >
-          <Card style={{marginTop: '30px'}}>
-            <Row >
-                <Card.Body style={{marginLeft: '10px', paddingLeft: '2rem', paddingRight: '2rem'}}>
-                  <Card.Text>
-                  <p><em>ESOL Teacher</em>, <strong>South Lakes High School</strong>, Reston, VA. <em>August 2015 - June 2016.</em></p>
-                  <ul>
-                    <li>Planned and implemented varied instruction for ESOL Level 1 Content and Literature classes</li>
-                    <li>Set measurable and attainable academic goals for students based upon benchmark reading and writing assessments</li>
-                    <li>Participated in professional development opportunities for Balanced Literacy program and co-teaching strategies</li>
-                     </ul>
-                </Card.Text>
-                </Card.Body>
-            </Row>
-          </Card>
         </Col>
       </Row>
       </Container>
