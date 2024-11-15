@@ -18,15 +18,15 @@ const Intro = () => {
     
     let transitionPhrases = () => {
         let i = 0
-        let l = 4 //length of array
+        let length = 5 //length of array
 
         setInterval(() => {
-            let phraseArray = ["web pages", "Ruby on Rails backends", "React apps", "user experiences"]
+            let phraseArray = ["web pages", "Ruby on Rails backends", "React apps", "Drupal sites", "user experiences"]
             if (i === 0){
                 i++ 
                 changePhraseState(phraseArray[i])
             }
-            if (i < l){
+            else if (i < length){
                 changePhraseState(phraseArray[i])
             }
             else {
