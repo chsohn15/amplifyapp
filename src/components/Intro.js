@@ -41,9 +41,11 @@ const Intro = () => {
 
     //Set interval so that 
     const Subtitle = styled.h5`
-    padding-top: 150px; 
-    color: purple; 
+    padding-top: 150px;
+    color: #6B46C1;
     margin-left: 50px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
     @media (max-width: 600px) {
         margin-top: -20px;
         margin-left: 30px;
@@ -51,10 +53,11 @@ const Intro = () => {
     `;
 
     const Title = styled.h1`
-    padding-top: 10px; 
-    color: purple; 
+    padding-top: 10px;
+    color: #6B46C1;
     margin-left: 50px;
     font-size: 55px;
+    font-family: 'Playfair Display', serif;
     @media (max-width: 600px) {
         font-size: 35px;
         margin-left: 30px;
@@ -63,7 +66,7 @@ const Intro = () => {
 
     const Arrow = styled.i`
     width: 30px;
-    color: purple;
+    color: #6B46C1;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -76,9 +79,10 @@ const Intro = () => {
     const Text = styled.div`
     margin-left: auto;
     margin-right: auto;
-    color: purple;
+    color: #6B46C1;
     width: 100px;
     margin-top: 18%;
+    font-family: 'Inter', sans-serif;
     @media (max-width: 600px) {
         display: none;
       };

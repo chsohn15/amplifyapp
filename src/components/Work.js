@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container'
 import SectionHeader from './SectionHeader'
 import styled from 'styled-components'
 
-const PURPLE = '#6B46C1'
+const PURPLE = 'var(--purple)'
 
 const Timeline = styled.div`
   position: relative;
