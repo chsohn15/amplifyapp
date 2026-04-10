@@ -17,25 +17,12 @@ const Intro = () => {
       }, [])
     
     let transitionPhrases = () => {
+        const phraseArray = ["web pages", "digital experiences", "AI-powered tools", "experiences that teach"]
         let i = 0
-        let length = 5 //length of array
 
         setInterval(() => {
-            let phraseArray = ["web pages", "Ruby on Rails APIs", "React apps", "Drupal sites", "user experiences"]
-            if (i === 0){
-                i++ 
-                changePhraseState(phraseArray[i])
-            }
-            else if (i < length){
-                changePhraseState(phraseArray[i])
-            }
-            else {
-                i = 0
-                changePhraseState(phraseArray[i])
-               
-            }
-            i++
-
+            i = (i + 1) % phraseArray.length
+            changePhraseState(phraseArray[i])
         }, 2500)
     }
 
@@ -77,26 +64,30 @@ const Intro = () => {
     `;
 
     const Text = styled.div`
-    margin-left: auto;
-    margin-right: auto;
     color: #6B46C1;
-    width: 100px;
-    margin-top: 18%;
     font-family: 'Inter', sans-serif;
+    text-align: center;
+    `
+
+    const BottomLink = styled(Nav.Link)`
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
     @media (max-width: 600px) {
         display: none;
       };
     `
 
     return (
-        <Jumbotron fluid id="jumbotron" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?ixlib=rb-1.2.1&w=1000&q=80')", backgroundSize: 'cover', height:'100vh'}}>
+        <Jumbotron fluid id="jumbotron" style={{ background: 'linear-gradient(135deg, #e9e0fb 0%, #f8f5ff 50%, #d9cef7 100%)', height:'100vh', position: 'relative'}}>
             <Subtitle>Hello, my name is </Subtitle>
             <Title>Christina Sohn.</Title>
             <Title>I create and design <span id="test">{phrase}.</span></Title>
-            <Nav.Link href="#my-story">
+            <BottomLink href="#my-story">
                 <Text>Learn more</Text>
-                <Arrow className="fa fa-chevron-down" ></Arrow>
-            </Nav.Link>
+                <Arrow className="fa fa-chevron-down" />
+            </BottomLink>
         </Jumbotron>
     )
 }
