@@ -63,14 +63,15 @@ const RoleRow = styled.div`
 
 const Role = styled.span`
   font-style: italic;
-  color: #333;
-  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 1rem;
 `
 
 const DateBadge = styled.span`
-  font-size: 0.8rem;
-  color: white;
-  background-color: ${PURPLE};
+  font-size: 0.78rem;
+  color: #6B46C1;
+  border: 1px solid #b39ddb;
   padding: 1px 8px;
   border-radius: 12px;
   white-space: nowrap;

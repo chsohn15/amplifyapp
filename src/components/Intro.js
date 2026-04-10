@@ -11,20 +11,16 @@ const Intro = () => {
     const[phrase, changePhraseState] = useState("web pages")
 
     useEffect(() => {
-        transitionPhrases()
-
-        return () => clearInterval(transitionPhrases);
-      }, [])
-    
-    let transitionPhrases = () => {
-        const phraseArray = ["web pages", "digital experiences", "AI-powered tools", "experiences that teach"]
+        const phraseArray = ["digital experiences", "AI-powered tools", "experiences that teach"]
         let i = 0
 
-        setInterval(() => {
-            i = (i + 1) % phraseArray.length
+        const intervalId = setInterval(() => {
             changePhraseState(phraseArray[i])
+            i = (i + 1) % phraseArray.length
         }, 2500)
-    }
+
+        return () => clearInterval(intervalId)
+    }, [])
 
     //Set interval so that 
     const Subtitle = styled.h5`
