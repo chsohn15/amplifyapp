@@ -4,8 +4,6 @@ import Card from 'react-bootstrap/Card'
 
 const BlogCard = (props) => {
 
-console.log(props.blog)
-
 const { title, thumbnail, content, link } = props.blog
 
 let pTag = content.search('<p>')
@@ -14,13 +12,8 @@ let stringStart = pTag + 3
 let preview = content.slice(stringStart, stringStart + 150)
 preview = preview.replace(/<\/?[^>]+(>|$)/g, "")
 
-let imgSrc 
-if (thumbnail){
-    imgSrc = thumbnail
-}
-else{
-    imgSrc = "https://centaur-wp.s3.eu-central-1.amazonaws.com/marketingweek/prod/content/uploads/2017/05/12103909/Coding-body-image-.jpg?auto=compress,format&q=60&w=750&h=460"
-}
+const extractedImg = content.match(/<img[^>]+src="([^"]+)"/)
+const imgSrc = thumbnail || (extractedImg && extractedImg[1]) || "https://centaur-wp.s3.eu-central-1.amazonaws.com/marketingweek/prod/content/uploads/2017/05/12103909/Coding-body-image-.jpg?auto=compress,format&q=60&w=750&h=460"
 
 return(
     <Card className="blog-card">
