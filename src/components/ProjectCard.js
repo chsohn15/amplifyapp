@@ -19,19 +19,19 @@ import ModalVideo from 'react-modal-video'
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 600,
-    flexGrow: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100%',
   },
   img: {
     maxWidth: 600,
     overflow: 'hidden',
     display: 'block',
     width: '100%',
-    height: '340px',
+    flex: 1,
+    minHeight: '200px',
     objectFit: 'cover',
     objectPosition: 'top',
-    "@media only screen and (max-width: 600px)": {
-      height: '200px',
-    }
   },
   paper: {
     border: '1px solid',
@@ -132,16 +132,16 @@ const ProjectCard = ({ images, title, description, technologies, youtubeVideoId,
   return (
     <Container style={{ marginTop }}>
       <Card>
-        <Row>
+        <Row style={{ alignItems: 'stretch' }}>
           {imageLeft ? (
             <>
-              <Col sm={7}>{stepper}</Col>
+              <Col sm={7} style={{ display: 'flex', padding: 0 }}>{stepper}</Col>
               <Col sm={4} style={{ marginLeft: '0px' }}>{info}</Col>
             </>
           ) : (
             <>
               <Col sm={5} style={{ marginLeft: '0px' }}>{info}</Col>
-              <Col sm={7}>{stepper}</Col>
+              <Col sm={7} style={{ display: 'flex', padding: 0 }}>{stepper}</Col>
             </>
           )}
         </Row>

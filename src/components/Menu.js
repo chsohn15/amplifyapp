@@ -15,7 +15,7 @@ const StyledNavbar = styled(Navbar)`
   padding: 10px 30px;
 `
 
-const StyledNavLink = styled(Nav.Link)`
+const StyledNavLink = styled.a`
   color: rgba(255, 255, 255, 0.75) !important;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
@@ -30,6 +30,7 @@ const StyledNavLink = styled(Nav.Link)`
   &:hover {
     color: white !important;
     background: rgba(107, 70, 193, 0.25);
+    text-decoration: none;
   }
 `
 
