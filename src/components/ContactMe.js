@@ -24,7 +24,7 @@ const ContactMe = (props) => {
                         I'd love to chat about anything ranging from job opportunities, new technologies, <br/>
                         entertaining podcasts, or great books to read.  
                         </Card.Text>
-                    <Button variant="dark" style={{backgroundColor: '#087FCE'}}>Say Hello</Button>
+                    <Button variant="dark" href="mailto:chsohn15@gmail.com" style={{backgroundColor: '#087FCE'}}>Say Hello</Button>
                  </Card.Body>
             </Card>
             </Row>
