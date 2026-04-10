@@ -1,4 +1,5 @@
 import React from 'react'
+import ProjectCard4 from './ProjectCard4'
 import ProjectCard from './ProjectCard'
 import ProjectCard2 from './ProjectCard2'
 import ProjectCard3 from './ProjectCard3'
@@ -20,6 +21,7 @@ const Projects = (props) => {
             <Row >
                 <Card.Body>
                   <Card.Text>
+                  <ProjectCard4 />
                   <ProjectCard />
                   <ProjectCard2 />
                   <ProjectCard3 />
