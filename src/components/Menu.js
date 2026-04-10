@@ -7,55 +7,94 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMedium } from '@fortawesome/free-brands-svg-icons'
+import styled from 'styled-components'
 
+const StyledNavbar = styled(Navbar)`
+  background: #18181b !important;
+  border-bottom: 2px solid var(--purple);
+  padding: 10px 30px;
+`
+
+const StyledNavLink = styled(Nav.Link)`
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.88rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 2px;
+  padding: 6px 14px !important;
+  border-radius: 4px;
+  transition: color 0.2s ease, background 0.2s ease;
+
+  &:hover {
+    color: white !important;
+    background: rgba(107, 70, 193, 0.25);
+  }
+`
+
+const IconLink = styled.a`
+  color: rgba(255, 255, 255, 0.65);
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: white;
+  }
+`
 
 const Menu = () => {
-    const [isHide, hide] = useState(false)
     const [stickyTopStatus, changeStatus] = useState("sticky-top")
 
-    let prev = 0 
+    let prev = 0
     const hideBar = () => {
-        //prev = window.scrollY;
-
         window.scrollY > prev ?
         changeStatus("")
         :
         changeStatus("sticky-top")
 
         prev = window.scrollY;
-     }
+    }
 
-     useEffect(() => {
+    useEffect(() => {
         window.addEventListener('scroll', hideBar);
-
         return () => window.removeEventListener('scroll', hideBar);
-      }, [])
-
+    }, [])
 
     return (
-        <Navbar bg="dark" variant="dark" className={stickyTopStatus} id={stickyTopStatus}>
-            <Navbar.Brand id="logo" href="#home" style={{marginLeft: '30px', marginTop: '-1px'}}>
+        <StyledNavbar variant="dark" className={stickyTopStatus} id={stickyTopStatus}>
+            <Navbar.Brand id="logo" href="#home" style={{ marginRight: '20px' }}>
                 <img
-                alt=""
-                src={CSLogo}
-                width="57"
-                height="33"
-                className="d-inline-block align-top"
-            />{' '}</Navbar.Brand>
+                    alt="CS Logo"
+                    src={CSLogo}
+                    width="57"
+                    height="33"
+                    className="d-inline-block align-top"
+                />
+            </Navbar.Brand>
             <Nav className="mr-auto">
-                <Nav.Link href="#my-story">My Story</Nav.Link>
-                <Nav.Link href="#work">Work</Nav.Link>
-                <Nav.Link href="#projects">Projects</Nav.Link>
-                <Nav.Link href="#blog">Blog</Nav.Link>
-                <Nav.Link href="#contact">Contact Me</Nav.Link>
+                <StyledNavLink href="#my-story">My Story</StyledNavLink>
+                <StyledNavLink href="#work">Work</StyledNavLink>
+                <StyledNavLink href="#projects">Projects</StyledNavLink>
+                <StyledNavLink href="#blog">Blog</StyledNavLink>
+                <StyledNavLink href="#contact">Contact</StyledNavLink>
             </Nav>
-            <a className="menu-icon" href="mailto:chsohn15@gmail.com" ><MailOutlineIcon style={{color:'white', marginTop: '3px', marginRight: '20px'}}/></a>
-            <a className="menu-icon" href="https://www.linkedin.com/in/christina-sohn/" target = "_blank" rel = "noopener noreferrer"><LinkedInIcon style={{color:'white', marginTop: '3px', marginRight: '20px'}}/></a>
-            <a className="menu-icon" href="https://github.com/chsohn15" target = "_blank" rel = "noopener noreferrer"><GitHub style={{color:'white', marginTop: '3px', marginRight: '20px'}}/></a>
-            <a className="menu-icon" href="https://chsohn15.medium.com/" target = "_blank" rel = "noopener noreferrer"><FontAwesomeIcon icon={faMedium} style={{color:'white', marginTop: '6px', marginRight: '10px', fontSize: '23px'}}/></a>     
-        </Navbar>
+            <IconLink className="menu-icon" href="mailto:chsohn15@gmail.com">
+                <MailOutlineIcon style={{ fontSize: '22px' }} />
+            </IconLink>
+            <IconLink className="menu-icon" href="https://www.linkedin.com/in/christina-sohn/" target="_blank" rel="noopener noreferrer">
+                <LinkedInIcon style={{ fontSize: '22px' }} />
+            </IconLink>
+            <IconLink className="menu-icon" href="https://github.com/chsohn15" target="_blank" rel="noopener noreferrer">
+                <GitHub style={{ fontSize: '22px' }} />
+            </IconLink>
+            <IconLink className="menu-icon" href="https://chsohn15.medium.com/" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faMedium} style={{ fontSize: '22px' }} />
+            </IconLink>
+        </StyledNavbar>
     )
 }
-
 
 export default Menu
