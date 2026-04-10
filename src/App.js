@@ -30,7 +30,7 @@ function App() {
   text-align: center;
   &:before, &:after {
     content: '';
-    border-top: 2px solid;
+    border-top: 2px solid var(--purple);
     margin: 0 20px 0 0;
     flex: 1 0 20px;
   }

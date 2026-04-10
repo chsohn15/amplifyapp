@@ -15,6 +15,11 @@ h1, h2, h3, .card-title {
   font-family: 'Playfair Display', serif;
 }
 
+#profile-image {
+  border: 3px solid var(--purple);
+  border-radius: 4px;
+}
+
 html {
   scroll-behavior: smooth;
 }
