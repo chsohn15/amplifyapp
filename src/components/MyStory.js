@@ -29,14 +29,15 @@ const MyStory = (props) => {
                     <p>When I transitioned to a software engineering student at Flatiron School coding bootcamp, I found another outlet for my creativity by building multifaceted projects using Ruby on Rails, Javascript, and React. My resourcefulness and hard work have been essential to ensuring that my projects are carefully planned, implemented, and edited.</p>
                     <pr>Here is a list of some of the technologies I have been using recently:</pr>
                 <ul>
-                <li>CSS/Sass</li>
-                <li>Javascript</li>
-                <li>Drupal</li>
+                <li>HTML/CSS/Sass</li>
+                <li>JavaScript</li>
+                <li>Drupal 10</li>
                 <li>PHP</li>
+                <li>Twig</li>
                 <li>React</li>
-                <li>Redux</li>
                 <li>Ruby on Rails</li>
-                <li>Material UI, Bootstrap UI, Semantic UI</li>
+                <li>Claude API (Anthropic)</li>
+                <li>Material UI, Bootstrap</li>
             </ul>
 
                   </Card.Text>

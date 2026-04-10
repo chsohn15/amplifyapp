@@ -11,33 +11,16 @@ const Intro = () => {
     const[phrase, changePhraseState] = useState("web pages")
 
     useEffect(() => {
-        transitionPhrases()
-
-        return () => clearInterval(transitionPhrases);
-      }, [])
-    
-    let transitionPhrases = () => {
+        const phraseArray = ["Ruby on Rails APIs", "React apps", "Drupal sites", "user experiences"]
         let i = 0
-        let length = 5 //length of array
 
-        setInterval(() => {
-            let phraseArray = ["web pages", "Ruby on Rails APIs", "React apps", "Drupal sites", "user experiences"]
-            if (i === 0){
-                i++ 
-                changePhraseState(phraseArray[i])
-            }
-            else if (i < length){
-                changePhraseState(phraseArray[i])
-            }
-            else {
-                i = 0
-                changePhraseState(phraseArray[i])
-               
-            }
-            i++
-
+        const intervalId = setInterval(() => {
+            changePhraseState(phraseArray[i])
+            i = (i + 1) % phraseArray.length
         }, 2500)
-    }
+
+        return () => clearInterval(intervalId)
+    }, [])
 
     //Set interval so that 
     const Subtitle = styled.h5`

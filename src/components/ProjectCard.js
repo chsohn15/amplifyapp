@@ -3,11 +3,6 @@ import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
-import BookQuest1 from './images/BookQuest1.jpg'
-import BookQuest2 from './images/BookQuest2.jpg'
-import BookQuest3 from './images/BookQuest3.jpg'
-import BookQuest4 from './images/BookQuest4.jpg'
-import BookQuest5 from './images/BookQuest5.jpg'
 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import MobileStepper from '@material-ui/core/MobileStepper';
@@ -16,31 +11,10 @@ import Button from '@material-ui/core/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import Popper from '@material-ui/core/Popper';
-import Popover from '@material-ui/core/Popover';
-
-
-import ReactDOM from 'react-dom'
-import ModalVideo from 'react-modal-video'
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
-const tutorialSteps = [
-  {
-    imgPath: BookQuest1,
-  },
-  {
-    imgPath: BookQuest2,
-  },
-  {
-    imgPath: BookQuest3,
-  },
-  {
-    imgPath: BookQuest4,
-  },
-  {
-    imgPath: BookQuest5,
-  },
-];
+import ModalVideo from 'react-modal-video'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -53,7 +27,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'block',
     width: '100%',
     height: '340px',
-    "@media only screen and (max-width: 600px)":{
+    objectFit: 'cover',
+    objectPosition: 'top',
+    "@media only screen and (max-width: 600px)": {
       height: '200px',
     }
   },
@@ -62,49 +38,37 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1.5),
     backgroundColor: theme.palette.background.paper,
   },
-}),{index: 1});
+}), { index: 1 });
 
-const ProjectCard = () => {
-
-  const [isOpen, openModal] = useState(false)
-
+// githubLinks: [{ label, url }] — one item = direct link, multiple = popper
+// imageLeft: true = stepper on left, false = stepper on right
+const ProjectCard = ({ images, title, description, technologies, youtubeVideoId, githubLinks = [], imageLeft = true, marginTop = '60px' }) => {
   const classes = useStyles();
   const theme = useTheme();
 
-  // Code for stepper 1
-  const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = tutorialSteps.length;
+  const [activeStep, setActiveStep] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
 
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
+  const maxSteps = images.length;
+  const popperOpen = Boolean(anchorEl);
+  const popperId = popperOpen ? 'github-popper' : undefined;
 
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  //Code for popper
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleClick = (event) => {
+  const handleGitHubClick = (event) => {
     setAnchorEl(anchorEl ? null : event.currentTarget);
   };
 
-  const open = Boolean(anchorEl);
-  const id = open ? 'simple-popper' : undefined;
+  const handleGitHubLinkClick = (url) => {
+    setAnchorEl(null);
+    window.open(url, '_blank');
+  };
 
-
-return (
-<Container >
-  <Card>
-    <Row>
-      <Col sm={7}>
-      <div className={classes.root}>
+  const stepper = (
+    <div className={classes.root}>
       <img
         className={classes.img}
-        src={tutorialSteps[activeStep].imgPath}
-        alt={tutorialSteps[activeStep].label}
-        id="project-image"
+        src={images[activeStep]}
+        alt={`${title} screenshot ${activeStep + 1}`}
       />
       <MobileStepper
         steps={maxSteps}
@@ -112,55 +76,78 @@ return (
         variant="dots"
         activeStep={activeStep}
         nextButton={
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+          <Button size="small" onClick={() => setActiveStep((p) => p + 1)} disabled={activeStep === maxSteps - 1}>
             Next
             {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
           </Button>
         }
         backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+          <Button size="small" onClick={() => setActiveStep((p) => p - 1)} disabled={activeStep === 0}>
             {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
             Back
           </Button>
         }
       />
     </div>
-      </Col>
-      <Col sm={4} style={{marginLeft: '0px'}}>
-        <Card.Body>
-          <Card.Title>BookQuest
-            <ModalVideo channel='youtube' isOpen={isOpen} videoId='GHGlrOopo3M' onClose={() => openModal(false)} />
-            <YouTubeIcon onClick={openModal} style={{cursor: 'pointer', fontSize: '30px', marginLeft: '15px'}}>Youtube</YouTubeIcon>
-            <GitHubIcon style={{ marginLeft: '10px'}} aria-describedby={id} type="button" onClick={handleClick}/>
-            <Popper id={id} open={open} anchorEl={anchorEl} >
-              <Typography anchorEl={anchorEl} onClick={() => {
-                handleClick()
-                window.open("https://github.com/chsohn15/book_quest_frontend/tree/master/book-quest-react", "_blank")}} className={classes.paper} style={{cursor: 'pointer'}}>Github Frontend</Typography>
-              <Typography anchorEl={anchorEl} onClick={() => {
-                handleClick()
-                window.open("https://github.com/chsohn15/book_quest_backend", "_blank")}} className={classes.paper} style={{cursor: 'pointer'}}>Github Backend</Typography>
-          </Popper>
-          </Card.Title>
-          <Card.Text>
-          <em>An app designed to motivate young people to read and interact with books through a rewards system</em><br/><br/>
-          <div>Technologies: </div>
-          <ul>
-            <li>React Hooks and Redux</li>
-            <li>Ruby on Rails</li>
-            <li>Google Books API and Embedded Viewer</li>
-            <li>Recharts API</li>
-            <li>JSON Web Tokens, OAuth</li>
-            <li>Material UI, Bootstrap, CSS</li>
-          </ul>
-          </Card.Text>
-        </Card.Body>
-      </Col>
-    </Row>
-  </Card>
-  </Container>
+  );
 
-            
-    )
+  const info = (
+    <Card.Body>
+      <Card.Title>
+        {title}
+        {youtubeVideoId && (
+          <>
+            <ModalVideo channel='youtube' isOpen={isOpen} videoId={youtubeVideoId} onClose={() => setIsOpen(false)} />
+            <YouTubeIcon onClick={() => setIsOpen(true)} style={{ cursor: 'pointer', fontSize: '30px', marginLeft: '15px' }} />
+          </>
+        )}
+        {githubLinks.length === 1 && (
+          <a href={githubLinks[0].url} target="_blank" rel="noopener noreferrer">
+            <GitHubIcon style={{ marginLeft: '10px', color: 'black' }} />
+          </a>
+        )}
+        {githubLinks.length > 1 && (
+          <>
+            <GitHubIcon style={{ marginLeft: '10px', cursor: 'pointer' }} aria-describedby={popperId} onClick={handleGitHubClick} />
+            <Popper id={popperId} open={popperOpen} anchorEl={anchorEl}>
+              {githubLinks.map(({ label, url }) => (
+                <Typography key={label} className={classes.paper} style={{ cursor: 'pointer' }} onClick={() => handleGitHubLinkClick(url)}>
+                  {label}
+                </Typography>
+              ))}
+            </Popper>
+          </>
+        )}
+      </Card.Title>
+      <Card.Text>
+        <em>{description}</em><br /><br />
+        <div>Technologies:</div>
+        <ul>
+          {technologies.map((tech) => <li key={tech}>{tech}</li>)}
+        </ul>
+      </Card.Text>
+    </Card.Body>
+  );
+
+  return (
+    <Container style={{ marginTop }}>
+      <Card>
+        <Row>
+          {imageLeft ? (
+            <>
+              <Col sm={7}>{stepper}</Col>
+              <Col sm={4} style={{ marginLeft: '0px' }}>{info}</Col>
+            </>
+          ) : (
+            <>
+              <Col sm={5} style={{ marginLeft: '0px' }}>{info}</Col>
+              <Col sm={7}>{stepper}</Col>
+            </>
+          )}
+        </Row>
+      </Card>
+    </Container>
+  );
 }
 
 export default ProjectCard
